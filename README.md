@@ -34,6 +34,7 @@
 | Font & UI | google_fonts, Material 3 |
 
 ## 📂 Cấu trúc project
+<pre>
 lib/
 ├── main.dart
 ├── firebase_options.dart
@@ -47,6 +48,7 @@ lib/
 │   └── user/                 (Trang chủ user, đặt phòng, thanh toán, lịch sử, hóa đơn, AI chat)
 ├── widgets/                  (Component dùng chung)
 └── theme/                    (Theme, gradient dùng chung)
+</pre>
 ## 🚀 Cài đặt và chạy project
 
 ### Yêu cầu
