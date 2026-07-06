@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../providers/chat_provider.dart';
+import '../../providers/room_provider.dart';
 import '../../theme/app_theme.dart';
 
 class AiChatScreen extends StatefulWidget {
@@ -14,6 +15,13 @@ class AiChatScreen extends StatefulWidget {
 class _AiChatScreenState extends State<AiChatScreen> {
   final TextEditingController _controller = TextEditingController();
   final ScrollController _scrollController = ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+    // Tải sẵn danh sách phòng mới nhất để AI có dữ liệu chính xác khi trả lời.
+    Future.microtask(() => context.read<RoomProvider>().loadRooms());
+  }
 
   void _scrollToBottom() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -29,7 +37,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
   void _send(String text) {
     if (text.trim().isEmpty) return;
-    context.read<ChatProvider>().sendMessage(text);
+    final rooms = context.read<RoomProvider>().rooms;
+    context.read<ChatProvider>().sendMessage(text, rooms: rooms);
     _controller.clear();
   }
 
@@ -108,7 +117,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                           ),
                           const SizedBox(height: 14),
                           Text(
-                            "Hỏi mình bất cứ điều gì nhé!",
+                            "Hỏi mình về phòng trống, giá phòng...",
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
