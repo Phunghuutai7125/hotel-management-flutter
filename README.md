@@ -34,19 +34,21 @@
 | Font & UI | google_fonts, Material 3 |
 
 ## 📂 Cấu trúc project
+<pre>
 lib/
 ├── main.dart
 ├── firebase_options.dart
-├── secrets.dart              # API key (không commit lên Git)
-├── models/                   # Room, Booking, Customer, Invoice, AppUser...
-├── services/                 # Giao tiếp trực tiếp với Firestore
-├── providers/                 # State management (ChangeNotifier)
+├── secrets.dart              (API key, không commit lên Git)
+├── models/                   (Room, Booking, Customer, Invoice, AppUser...)
+├── services/                 (Giao tiếp trực tiếp với Firestore)
+├── providers/                (State management - ChangeNotifier)
 ├── screens/
-│   ├── auth/                 # Đăng nhập, Đăng ký
-│   ├── admin/                # Dashboard, quản lý phòng/khách/booking, nhận-trả phòng, hóa đơn
-│   └── user/                 # Trang chủ user, đặt phòng, thanh toán, lịch sử, hóa đơn, AI chat
-├── widgets/                   # Component dùng chung
-└── theme/                     # Theme, gradient dùng chung
+│   ├── auth/                 (Đăng nhập, Đăng ký)
+│   ├── admin/                (Dashboard, quản lý phòng/khách/booking, nhận-trả phòng, hóa đơn)
+│   └── user/                 (Trang chủ user, đặt phòng, thanh toán, lịch sử, hóa đơn, AI chat)
+├── widgets/                  (Component dùng chung)
+└── theme/                    (Theme, gradient dùng chung)
+</pre>
 ## 🚀 Cài đặt và chạy project
 
 ### Yêu cầu
