@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "143769500845",
+    "project_id": "hotel-management-btl",
+    "storage_bucket": "hotel-management-btl.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143769500845:android:13e43c3fac07c89e0d5a24",
+        "android_client_info": {
+          "package_name": "com.example.hotel_management"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbR0a2rSFDmR57gafl7ObVF920euFhW5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

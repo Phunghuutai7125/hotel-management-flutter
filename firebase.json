@@ -1,0 +1,39 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "hotel-management-btl",
+          "appId": "1:143769500845:android:13e43c3fac07c89e0d5a24",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "hotel-management-btl",
+          "configurations": {
+            "android": "1:143769500845:android:13e43c3fac07c89e0d5a24",
+            "ios": "1:143769500845:ios:3587be68f7f1116c0d5a24",
+            "macos": "1:143769500845:ios:3587be68f7f1116c0d5a24",
+            "web": "1:143769500845:web:5503a8b621c9cb410d5a24",
+            "windows": "1:143769500845:web:e6f3f1b1daeef2690d5a24"
+          }
+        }
+      }
+    }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "disallowLegacyRuntimeConfig": true,
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ]
+    }
+  ]
+}
